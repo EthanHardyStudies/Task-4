@@ -7,8 +7,8 @@ const ValidateLuhnCheckDigit = num => {
     //Calculate the Luhn sum by splitting the odd and even array items and adding or multiplying then adding them to the sum.
     let luhnSum = valueArray.reduce((acc, val, i) => (
       i % 2 !== 0 //Check if the numbers index is equally divisible by two to check if the number is in an even or odd position
-      ? acc + val //if odd add the value to the sum total.
-      : acc + ((val*2) % 9) || 9
+      ? acc + val 
+      : acc + ((val*2) % 9) || 9 
     ), 0)
     //add the check digit to the sum
     luhnSum += checkDigit;
